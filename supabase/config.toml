@@ -1,0 +1,17 @@
+project_id = "sundialed"
+
+[auth]
+# Only people on the allowed_users list can ever have an account.
+enable_signup = false
+
+[functions.sync-sheet]
+# Not called by the browser; it checks its own SYNC_SECRET bearer token instead.
+verify_jwt = false
+
+[functions.sync-now]
+# Called by the app: the gateway checks the signed-in user's token, and the function checks the allow-list.
+verify_jwt = true
+
+[functions.update-target]
+# Called by the app: the gateway checks the signed-in user's token, and the function checks the allow-list.
+verify_jwt = true

@@ -1,0 +1,10 @@
+node_modules
+dist
+.env
+.env.*
+!.env.example
+# Never commit credentials
+*service-account*.json
+*-key.json
+supabase/.temp
+supabase/.branches
